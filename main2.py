@@ -36,7 +36,7 @@ y = dataset[predict_label]
 #creating list of objects of all classifiers in sklearn
 classifier_list = []
 classifier_name = ['Logistic Regression','Random Forest','AdaBoost Classifier','Gaussian Process Classifier','Decision Tree Classifier','Quadratic Discriminant Analysis','SVC']
-classifier_list.append(LogisticRegression(C=4, penalty='l1'))
+classifier_list.append(LogisticRegression(C=4, penalty='l1', solver='liblinear'))
 classifier_list.append(RandomForestClassifier(n_estimators = 200,min_samples_leaf = 80))
 classifier_list.append(AdaBoostClassifier())
 classifier_list.append(GaussianProcessClassifier())
